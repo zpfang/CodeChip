@@ -1,8 +1,5 @@
 package cc.zpfang.nio;
 
-import org.apache.ibatis.annotations.SelectKey;
-import org.apache.lucene.store.SleepingLockWrapper;
-
 import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -42,7 +39,7 @@ public class Server {
                     continue;
                 }
                 if(key.isAcceptable()){
-                    accetpt(key);
+                    accept(key);
                 }else if(key.isReadable()){
                     read(key);
                 }else if(key.isWritable()){
@@ -81,7 +78,7 @@ public class Server {
         socketChannel.register(selector, SelectionKey.OP_WRITE);
     }
 
-    private void accetpt(SelectionKey key) throws IOException {
+    private void accept(SelectionKey key) throws IOException {
         ServerSocketChannel ssc = (ServerSocketChannel) key.channel();
         SocketChannel clientChannel = ssc.accept();
         clientChannel.configureBlocking(false);
