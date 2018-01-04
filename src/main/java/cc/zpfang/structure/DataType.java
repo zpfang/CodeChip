@@ -19,6 +19,6 @@ public class DataType {
         System.out.println(list);
         System.out.println(hello[0]);
 
-        list.spliterator()
+        list.spliterator();
     }
 }
