@@ -1,7 +1,6 @@
-package cc.zpfang.task;
+package cc.zpfang.es.task;
 
-import cc.zpfang.persistent.UserMapper;
-import lombok.extern.java.Log;
+import cc.zpfang.es.persistent.UserMapper;
 import lombok.extern.log4j.Log4j;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.annotation.Autowired;

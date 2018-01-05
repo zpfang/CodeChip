@@ -1,6 +1,6 @@
-package cc.zpfang.persistent;
+package cc.zpfang.es.persistent;
 
-import cc.zpfang.model.User;
+import cc.zpfang.es.model.User;
 import org.apache.ibatis.annotations.ResultType;
 import org.apache.ibatis.annotations.Select;
 

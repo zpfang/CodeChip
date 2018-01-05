@@ -1,7 +1,7 @@
-package cc.zpfang.task;
+package cc.zpfang.es.task;
 
-import cc.zpfang.model.User;
-import cc.zpfang.persistent.UserMapper;
+import cc.zpfang.es.model.User;
+import cc.zpfang.es.persistent.UserMapper;
 import com.alibaba.fastjson.JSON;
 import org.elasticsearch.action.bulk.BulkRequestBuilder;
 import org.elasticsearch.action.bulk.BulkResponse;
@@ -45,7 +45,7 @@ public class TaskExcutor extends Thread{
 
     @Override
     public void run() {
-        Long times = (end - start) / 1000;
+        Long times = (end - start) / 10;
         for(int i = 0; i < times; i++){
             Long startOffset = start + 1000 * i;
             List<User> userList = userMapper.getUserList(startOffset);

@@ -1,4 +1,4 @@
-package cc.zpfang.model;
+package cc.zpfang.es.model;
 
 import lombok.Getter;
 import lombok.Setter;

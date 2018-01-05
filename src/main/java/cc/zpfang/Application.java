@@ -1,5 +1,6 @@
 package cc.zpfang;
 
+import cc.zpfang.es.task.TaskExcutor;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,5 +15,7 @@ public class Application {
 
     public static void main(String[] args) throws Exception {
         SpringApplication.run(Application.class, args);
+        TaskExcutor taskExcutor = new TaskExcutor("test", 1L, 10L);
+        taskExcutor.run();
     }
 }

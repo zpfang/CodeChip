@@ -1,7 +1,7 @@
-package cc.zpfang.controller;
+package cc.zpfang.es.controller;
 
-import cc.zpfang.model.User;
-import cc.zpfang.persistent.UserMapper;
+import cc.zpfang.es.model.User;
+import cc.zpfang.es.persistent.UserMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
