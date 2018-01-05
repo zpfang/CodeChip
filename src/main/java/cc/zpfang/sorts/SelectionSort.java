@@ -6,6 +6,10 @@ package cc.zpfang.sorts;
  */
 public class SelectionSort implements Sort{
 
+    /**
+     * 选择排序(冒泡排序)
+     * 通过两层循环,依次选出最小的值
+     */
     @Override
     public void sort(Comparable[] list) {
         if(list == null || list.length == 0){

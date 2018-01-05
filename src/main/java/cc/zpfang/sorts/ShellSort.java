@@ -6,6 +6,11 @@ package cc.zpfang.sorts;
  */
 public class ShellSort implements Sort {
 
+    /**
+     * 希尔排序
+     * 插入排序的改进版
+     *
+     */
     @Override
     public void sort(Comparable[] list) {
         if (list == null || list.length == 0) {
