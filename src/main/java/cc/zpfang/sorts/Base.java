@@ -26,10 +26,11 @@ public class Base{
    }
 
     public static void main(String[] args) {
-        Integer[] list = new Integer[]{4, 3, 2, 1};
+        Integer[] list = new Integer[]{4, 3, 2, 1, 7, 12, 90};
         //Sort sort = new SelectionSort();
         //Sort sort = new InsertionSort();
-        Sort sort = new ShellSort();
+        //Sort sort = new ShellSort();
+        Sort sort = new MergerSort();
         sort.sort(list);
         log.info("sorted: " + JSON.toJSONString(list));
     }
