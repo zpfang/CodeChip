@@ -1,0 +1,18 @@
+spring:
+      datasource:
+        name: hummer
+        url: jdbc:oracle:thin:@192.168.110.12:1521:devdb1
+        username: message
+        password: message
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: oracle.jdbc.driver.OracleDriver
+
+mybatis:
+  type-aliases-package: cc.zpfang.dao
+  mapper-locations: dao/*.xml
+
+server:
+  port: 9090
+
+env:
+  JAVA_OPTS: "-Xdebug -Xrunjdwp:server=y,transport=dt_socket,suspend=n,address=9091"
