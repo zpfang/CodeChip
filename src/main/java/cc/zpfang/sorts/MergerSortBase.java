@@ -4,29 +4,14 @@ package cc.zpfang.sorts;
  * Description:
  * Created by fangzp on 2018-01-03.
  */
-public class MergerSort implements Sort {
+public abstract class MergerSortBase implements Sort {
 
-    @Override
-    public void sort(Comparable[] list) {
-        sort(list, 0, list.length - 1);
-
-    }
-
-    private void sort(Comparable[] array, int left, int right) {
-        if (right <= left) {
-            return;
-        }
-        int mid = left + (right - left) / 2;
-        sort(array, left, mid);
-        sort(array, mid + 1, right);
-        merge(array, left, mid, right);
-    }
-
-    private void merge(Comparable[] array, int left, int mid, int right) {
+    public void merge(Comparable[] array, int left, int mid, int right) {
         int h = right - left + 1;
         int l = left;
         int r = mid + 1;
         Comparable[] copyArray = new Comparable[array.length];
+        //每次归并都拷贝会有性能问题, 可提出为变量, 只拷贝一次
         System.arraycopy(array, left, copyArray, left, h);
         for (int i = left; i <= right; i++) {
             if (l > mid) {

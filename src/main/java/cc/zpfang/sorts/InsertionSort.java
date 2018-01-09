@@ -9,6 +9,7 @@ public class InsertionSort implements Sort {
     /**
      * 插入排序
      * 局部有序, 先保证最前面的有序, 然后依次有序, 类似后面的数据是新插入的
+     * 复杂度 O(n^2) 空间复杂度O(0) 稳定排序
      */
     @Override
     public void sort(Comparable[] list) {

@@ -7,8 +7,9 @@ package cc.zpfang.sorts;
 public class SelectionSort implements Sort{
 
     /**
-     * 选择排序(冒泡排序)
+     * 选择排序
      * 通过两层循环,依次选出最小的值
+     * 复杂度 O(n^2) 空间复杂度O(1) 非稳定排序
      */
     @Override
     public void sort(Comparable[] list) {

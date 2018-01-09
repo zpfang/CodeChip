@@ -9,7 +9,9 @@ public class ShellSort implements Sort {
     /**
      * 希尔排序
      * 插入排序的改进版
-     *
+     * 先分成几组, 对每个组内的相同序号的元素进行选择排序
+     * 调整步长, 直到步长为1, 每次调整步长执行上一步
+     * 复杂度 O(n^1.3) 空间复杂度O(1) 非稳定排序
      */
     @Override
     public void sort(Comparable[] list) {
